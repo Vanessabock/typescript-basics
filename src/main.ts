@@ -1,3 +1,6 @@
+
+// MORNING
+
 const age: number = 24;
 
 for (let i = 1; i <= age; i++){
@@ -57,3 +60,31 @@ function getStarCount(n: number, total: number): number {
     return stars;
 }
 
+// AFTERNOON
+
+const arrNumbers = [1, 2, 3, 4, 5];
+const newArrNumbers = arrNumbers.map(value => value * 2);
+console.log(newArrNumbers)
+
+const arrWords = ["abc", "abcdef", "abcde", "abcdefg"];
+const newArrWords = arrWords.filter(word => word.length > 5);
+console.log(newArrWords)
+
+const arrNumbers2 = [1, 2, 3, 4, 5];
+const newArrNumbers2 = arrNumbers2.reduce(function(a, b) {return a + b;});
+console.log(newArrNumbers2)
+
+const arrNumbers3 = [1, 2, 11, 4, 5];
+const newArrNumbers3 = arrNumbers3.some(value => value > 10);
+console.log(newArrNumbers3)
+
+// BONUS
+
+const list = [15, 6, 3213, 9, 0, 12, 8464 , 1, 1264, 481, 186, 1031, 194];
+
+let result = list.sort((a, b) => b - a)
+    .map(value => Math.pow(value,2))
+    .slice(4, -2)
+    .filter(value => value % 4 !== 0)
+    .reduce((a, b) => a + b);
+console.log(result);
