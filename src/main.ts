@@ -39,4 +39,21 @@ if (isAdmin){
     console.log("isAdmin is falsy");
 }
 
+// BONUS
+
+const n: number = 6;
+
+getStarCount(n * 2 - 1, n * 2 - 1);
+for (let i = 0; i < n; i++){
+    console.log(" ".repeat(n - 1) + "*");
+}
+
+function getStarCount(n: number, total: number): number {
+    let stars: number = 1;
+    if ((n - 2) > 0){
+        stars = getStarCount(n - 2, total);
+    }
+    console.log(" ".repeat((total - n) / 2) + "*".repeat(n));
+    return stars;
+}
 
